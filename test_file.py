@@ -1,3 +1,4 @@
-my_stingy_landlords = ['Alfredo', 'Betty', 'Joanna', 'Mr. Summersbee', 123, True]
-my_stingy_landlords.remove('Alfredo')
-print(my_stingy_landlords)
+def name(argument):
+    print("Hi my name is " + argument)
+
+name("Fahad")
