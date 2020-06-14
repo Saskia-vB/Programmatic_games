@@ -1,13 +1,13 @@
 # The Fibonacci numbers are the numbers in the following integer sequence.
 # 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ……..
 
-array = [5, 5, 6, 7, 8, 8]
+def fib_upto(num):
+    new_num, num_1 = 0,0
+    num_2 = 1
+    while new_num < num:
+        new_num = num_1 + num_2
+        print(num_1)
+        num_1 = num_2
+        num_2 = new_num
 
-def no_duplicates(array):
-    new_array= []
-    for item in array:
-       if new_array.count(item) < 1:
-           new_array.append(item)
-    return new_array
-
-print(no_duplicates(array))
+fib_upto(7)
