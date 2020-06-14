@@ -3,6 +3,7 @@
 
 # sum of the values of they keys being called out
 
+
 while True:
 
     score = {"a": 1 , "b": 3 , "c": 3 , "d": 2 ,
@@ -16,18 +17,16 @@ while True:
 
     def scrabble_score(word):
         total = 0
-        for letter in word:
-            total += score[letter]
-            if len(word) == 5:
-                return scrabble_score(word)
-            else:
-                return "Your word has to be 5 letters long"
-        return total
+        if len(word) != 5:
+            return "Your word has to be 5 letters long"
+        elif len(word) == 5:
+            for letter in word:
+                total += score[letter]
+            return total
 
 
     word = input("Choose your 5 letter word: ")
     print(scrabble_score(word))
-
 
 
 ## def scrabble_calc(word):
